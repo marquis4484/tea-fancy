@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+@import "@fontsource/josefin-sans"; 
 
 /*
 =============== 
@@ -61,10 +62,8 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
-    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: #f0f0f0;
+ font-family: Arial, Helvetica, sans-serif;
+  background: #23b5bd;
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -177,6 +176,35 @@ p {
   align-items: center;
   justify-content: center;
 }
+
+/*
+=============== 
+Video Background
+===============
+*/
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -2;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  z-index: -1;
+}
 /*
 =============== 
 Navbar
@@ -185,19 +213,21 @@ Navbar
 
 .navbar {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
+  background-color: #c9e6e8;
 }
 
-.nav-center {
+/* .nav-right {
+  margin-left: auto;
+} */
+
+/* .nav-center {
   width: 90vw;
   max-width: var(--max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: center;
-}
+} */
 
 .logo-with-nav {
   display: flex;
@@ -206,12 +236,14 @@ Navbar
   width: 45px;
   height: 45px;
   margin-right: 1rem;
-  text-align: center;
+  margin-left: 45px;
+color: var(--clr-white);
 }
+
 .nav-link-logo {
-  font-size: 3.2rem;
+  font-size: 2.2rem;
   color: black;
-  font-family: "Alex Brush", cursive;
+ font-family: Arial, Helvetica, sans-serif;
   transition: var(--transition);
   margin-left: 0.5rem;
 }
@@ -234,6 +266,7 @@ Navbar
   cursor: pointer;
   transition: var(--transition);
   margin-top: 10px;
+  
 }
 .toggle-nav:hover {
   background: var(--clr-primary-3);
@@ -248,6 +281,7 @@ Navbar
   font-size: 1.6rem;
   color: black;
   cursor: pointer;
+  color: var(--clr-white);
 }
 .cart-item-count {
   position: absolute;
@@ -266,19 +300,62 @@ Navbar
 
 /* These styles will not be applied if min-width is reached */
 @media screen and (min-width: 950px) {
-  .nav-center {
+  /* .nav-center {
     position: relative;
-  }
+  } */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  color: var(--clr-white);
+}
+
+.nav-right {
+  margin-left: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  
+}
+
+.toggle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+  padding-right: 20px;
+}
+
+.toggle-cart i {
+  font-size: 1.5rem;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -12px;
+  right: 0;
+}
 
   .logo-with-nav {
     display: flex;
-    align-items: center;
   }
   .nav-logo {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 40px;
     margin-right: 1rem;
+    margin-left: 0.5rem;
     margin-top: 20px;
+  
   }
 
   .toggle-nav {
@@ -288,22 +365,26 @@ Navbar
     display: flex;
     font-size: 3.5rem;
     text-transform: capitalize;
-    font-family: "Alex Brush", cursive;
+     font-family: Arial, Helvetica, sans-serif;
     padding: 0px 0px 0px 50px;
+    color: var(--clr-white);
   }
   .nav-link {
     color: black;
     margin-right: 3rem;
     transition: var(--transition);
-    font-size: 2.25rem;
+    color: var(--clr-white);
+    font-size: 1.3rem;
   }
   .nav-link:hover {
     color: var(--clr-primary-5);
   }
   .nav-link-logo {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: black;
-    font-family: "Alex Brush", cursive;
+     margin-left: 2rem;
+    font-family: "Mea Culpa", cursive;
+    color: var(--clr-white);
     transition: var(--transition);
   }
   .nav-link-logo:hover {
@@ -328,12 +409,16 @@ Hero
 */
 .hero {
   min-height: 100vh;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(./images/Tealaxation_Home.jpg) center/cover;
   display: grid;
   place-items: center;
   color: var(--clr-white);
+    position: relative;
+  z-index: 10;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero-container {
   width: 90vw;
