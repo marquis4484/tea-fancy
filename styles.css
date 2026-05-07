@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
-@import "@fontsource/josefin-sans"; 
+@import "@fontsource/josefin-sans";
 
 /*
 =============== 
 Variables
 ===============
 */
- 
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(21, 91%, 17%);
@@ -62,7 +62,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
- font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #23b5bd;
   color: var(--clr-grey-1);
   line-height: 1.5;
@@ -127,9 +127,7 @@ p {
   width: 100%;
   display: block;
 }
-.text-slanted {
-  font-family: "Alex Brush", cursive;
-}
+
 /* max-width:maximun width element can be */
 .section-center {
   width: 90vw;
@@ -237,13 +235,13 @@ Navbar
   height: 45px;
   margin-right: 1rem;
   margin-left: 45px;
-color: var(--clr-white);
+  color: var(--clr-white);
 }
 
 .nav-link-logo {
   font-size: 2.2rem;
   color: black;
- font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   transition: var(--transition);
   margin-left: 0.5rem;
 }
@@ -266,7 +264,6 @@ color: var(--clr-white);
   cursor: pointer;
   transition: var(--transition);
   margin-top: 10px;
-  
 }
 .toggle-nav:hover {
   background: var(--clr-primary-3);
@@ -304,47 +301,46 @@ color: var(--clr-white);
     position: relative;
   } */
 
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 0 2rem;
-  box-sizing: border-box;
-  width: 100%;
-  background: transparent;
-  position: relative;
-  z-index: 10;
-  color: var(--clr-white);
-}
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+    color: var(--clr-white);
+  }
 
-.nav-right {
-  margin-left: auto;
-}
+  .nav-right {
+    margin-left: auto;
+  }
 
-.nav-links {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  
-}
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
 
-.toggle-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 40px;
-  padding-right: 20px;
-}
+  .toggle-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    padding-right: 20px;
+  }
 
-.toggle-cart i {
-  font-size: 1.5rem;
-}
+  .toggle-cart i {
+    font-size: 1.5rem;
+  }
 
-.cart-item-count {
-  position: absolute;
-  top: -12px;
-  right: 0;
-}
+  .cart-item-count {
+    position: absolute;
+    top: -12px;
+    right: 0;
+  }
 
   .logo-with-nav {
     display: flex;
@@ -355,7 +351,6 @@ color: var(--clr-white);
     margin-right: 1rem;
     margin-left: 0.5rem;
     margin-top: 20px;
-  
   }
 
   .toggle-nav {
@@ -365,7 +360,7 @@ color: var(--clr-white);
     display: flex;
     font-size: 3.5rem;
     text-transform: capitalize;
-     font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0px 0px 0px 50px;
     color: var(--clr-white);
   }
@@ -382,7 +377,7 @@ color: var(--clr-white);
   .nav-link-logo {
     font-size: 2.5rem;
     color: black;
-     margin-left: 2rem;
+    margin-left: 2rem;
     font-family: "Mea Culpa", cursive;
     color: var(--clr-white);
     transition: var(--transition);
@@ -412,15 +407,19 @@ Hero
   display: grid;
   place-items: center;
   color: var(--clr-white);
-    position: relative;
+  position: relative;
   z-index: 10;
   min-height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.text-slanted{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
 .hero-container {
+  text-align: center;
   width: 90vw;
   max-width: var(--max-width);
 }
@@ -457,9 +456,20 @@ Hero
 }
 
 @media screen and (min-width: 992px) {
+
+  .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  text-align: center;
+}
   .hero h1 {
     font-size: 5.25rem;
     letter-spacing: 5px;
+
   }
   .hero h3 {
     font-size: 2.75rem;
@@ -678,7 +688,7 @@ Title
 }
 /*
 =============== 
-product
+Product
 ===============
 */
 .product-img {
@@ -1054,4 +1064,128 @@ Home Page
 
 .featured-center {
   display: none;
+}
+
+/*
+=============== 
+Home Page Animations
+===============
+*/
+
+/* navbar links: fade in + drop down */
+.nav-links li {
+  opacity: 0;
+  transform: translateY(-25px);
+  animation: navDropIn 1s ease forwards;
+}
+
+.nav-links li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nav-links li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav-links li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.nav-links li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.toggle-container {
+  opacity: 0;
+  transform: translateY(-25px);
+  animation: navDropIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes navDropIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* hero text: move upward after page loads */
+.hero-container h1,
+.hero-container h3 {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: heroMoveUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-container h3 {
+  animation-delay: 0.7s;
+}
+
+/* Tea Fancy logo + image fade in */
+.logo {
+  opacity: 0;
+  animation: logoFadeIn 1.2s ease forwards;
+}
+
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroMoveUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-logo:hover {
+  animation: wiggle 0.6s ease;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-6deg);
+  }
+
+  80% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* shop button: last to fade in */
+.hero-btn {
+  opacity: 0;
+  animation: fadeInButton 1s ease forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes fadeInButton {
+  to {
+    opacity: 1;
+  }
 }
