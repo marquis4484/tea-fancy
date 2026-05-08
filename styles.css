@@ -912,6 +912,19 @@ Locations Page
 Shop Page
 ===============
 */
+.shop-now{
+   background: var(--clr-primary-5);
+  padding: 2px;
+  border-radius: 999px;
+
+  color: white;
+  text-decoration: none;
+ transition: var(--transition);
+  transition: 0.3s ease;
+}
+
+   
+
 .products {
   width: 90vw;
   display: grid;
