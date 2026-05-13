@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/TFLogo2.png" />
     <link />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -15,76 +18,134 @@
     <!-- styles css -->
     <link rel="stylesheet" href="styles.css" />
     <!-- page title -->
-    <title>Tea-Fancy</title>
+    <title>Tea Fancy</title>
   </head>
   <body>
+    <video class="background-video" autoplay muted loop playsinline>
+      <source src="images/Tea-Fancy!HomepageVideo.mp4" type="video/mp4" />
+    </video>
 
-        <video class="background-video"  autoplay muted loop playsinline>
-        <source src="images/Tea-Fancy!HomepageVideo.mp4" type="video/mp4" />
-      </video>
-    <!-- navbar -->
-   <nav class="navbar">
-  <div class="nav-left">
-    <div class="logo-with-nav">
-      <button class="toggle-nav">
-        <i class="fas fa-bars"></i>
-      </button>
+    <nav class="navbar">
+      <div class="nav-left">
+        <!-- sidebar + logo -->
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
 
-      <div class="logo">
-        <ul>
+        <div class="logo">
+          <ul>
+            <li>
+              <a href="index.html" class="company-name">Tea Fancy</a>
+
+              <img src="./images/TFLogo2.png" class="tea-pic" alt="logo" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- links + cart icon -->
+        <ul class="nav-links">
           <li>
-            <a href="index.html" class="nav-link-logo">Tea Fancy</a>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+          </li>
 
-            <img
-              src="./images/TFLogo2.png"
-              class="nav-logo"
-              alt="logo"
-            />
+          <li>
+            <a href="locations.html" class="nav-link">Locations</a>
+          </li>
+
+          <li>
+            <a href="contacts.html" class="nav-link">Contacts</a>
+          </li>
+
+          <li class="shop-now">
+            <a href="products.html" class="nav-link">Shop Now</a>
           </li>
         </ul>
+
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+
+          <span class="cart-item-count">1</span>
+        </div>
       </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!-- links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-home fa-fw"></i>
+              home
+            </a>
+          </li>
+          <li>
+            <a href="aboutus.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              about
+            </a>
+          </li>
+          <li>
+            <a href="locations.html" class="sidebar-link">
+              <i class="fas fa-map fa-fw"></i>
+              locations
+            </a>
+          </li>
+          <li>
+            <a href="shop.html" class="sidebar-link">
+              <i class="fas fa-shopping-cart fa-fw"></i>
+              shop
+            </a>
+          </li>
+        </ul>
+      </aside>
     </div>
-  </div>
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items"></div>
+        <!-- footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">total : $12.99</h3>
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
 
-  <!-- links -->
-  <div class="nav-right">
-    <ul class="nav-links">
-      <li>
-        <a href="aboutus.html" class="nav-link">About Us</a>
-      </li>
-
-      <li>
-        <a href="locations.html" class="nav-link">Locations</a>
-      </li>
-
-      <li>
-        <a href="contacts.html" class="nav-link">Contacts</a>
-      </li>
-
-      <li class="shop-now">
-        <a href="products.html" class="nav-link">Shop Now</a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- cart icon -->
-  <div class="toggle-container">
-    <button class="toggle-cart">
-      <i class="fas fa-shopping-cart"></i>
-    </button>
-
-    <span class="cart-item-count">1</span>
-  </div>
-</nav>
-<!-- hero -->
-        <section class="hero">
+    <!-- hero -->
+    <section class="hero">
       <div class="hero-container">
-        <h1 class="text-slanted">Premium tea at affordable prices!</h1>
-        <h3>In the mode for something flavorful? Shop with us!</h3>
+        <h1 class="slogan">Premium teas at affordable prices!</h1>
+        <h3>In the mood for something flavorful? Shop with us today!</h3>
         <a href="shop.html" class="hero-btn"> shop </a>
       </div>
     </section>
- 
+
+    <!-- footer -->
+    <footer>
+      <div className="footer_copyright">
+        <small>
+          &copy; Tea Fancy, Inc. All rights reserved 20XX. 
+        </small>
+      </div>
+    </footer>
+
     <script type="module" src="index.js"></script>
   </body>
 </html>
