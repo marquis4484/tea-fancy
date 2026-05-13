@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(Shop) Tealaxation</title>
+    <title>(Locations) Tealaxation</title>
     <link rel="shortcut icon" href="./images/TealaxationLogo.png" />
     <!-- font-awesome -->
     <link
@@ -48,6 +48,7 @@
             </li>
           </ul>
         </div>
+        <!-- logo -->
 
         <!-- cart icon -->
         <div class="toggle-container">
@@ -58,6 +59,7 @@
         </div>
       </div>
     </nav>
+    <!-- hero -->
 
     <!-- sidebar -->
     <div class="sidebar-overlay">
@@ -75,15 +77,15 @@
             </a>
           </li>
           <li>
-            <a href="shop.html" class="sidebar-link">
-              <i class="fas fa-couch fa-fw"></i>
-              shop
+            <a href="aboutus.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              about
             </a>
           </li>
           <li>
-            <a href="about.html" class="sidebar-link">
-              <i class="fas fa-book fa-fw"></i>
-              about
+            <a href="locations.html" class="sidebar-link">
+              <i class="fas fa-map fa-fw"></i>
+              locations
             </a>
           </li>
           <li>
@@ -113,45 +115,21 @@
         </footer>
       </aside>
     </div>
-    <div class="title">
-      <h2>Order When You Have Time</h2>
-    </div>
-    <!-- products -->
-    <section class="products">
-      <!-- filters -->
-      <div class="filters">
-        <div class="filters-container">
-          <!-- search -->
-          <form class="input-form">
-            <input type="text" class="search-input" placeholder="search..." />
-          </form>
-          <!-- categories -->
-          <h4>Tea Types</h4>
-          <article class="companies">
-            <button class="company-btn">all</button>
-            <button class="company-btn">any</button>
-          </article>
-          <!-- price -->
-          <h4>Price</h4>
-          <form class="price-form">
-            <input
-              type="range"
-              class="price-filter"
-              min="0"
-              value="50"
-              max="100"
-            />
-          </form>
-          <p class="price-value"></p>
-        </div>
+    <!-- locations -->
+    <div class="main-locations"> 
+       <div class="title">
+        <h2 class="locations-title">Tea Time Anywhere</h2>
       </div>
-      <!-- products -->
-      <div class="products-container"></div>
+      <p class="locations-text">
+        We have many tea shops all across the world. Come check us out!
+      </p>
+      <img
+      src="./images/Map.png"
+      class="map"
+      alt="logo"
+    /></div>
+    
     </section>
-    <!-- page loading -->
-    <div class="page-loading">
-      <h2>Loading...</h2>
-    </div>
-    <script type="module" src="./src/pages/shop.js"></script>
+    <script type="module" src="./src/pages/locations.js"></script>
   </body>
 </html>

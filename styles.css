@@ -100,7 +100,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1035px) {
   h1 {
     font-size: 4rem;
   }
@@ -185,12 +185,9 @@ Video Background
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   z-index: -2;
 }
 
@@ -198,11 +195,10 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-
   background: rgba(0, 0, 0, 0.45);
-
   z-index: -1;
 }
+
 /*
 =============== 
 Navbar
@@ -230,6 +226,7 @@ Navbar
 .logo-with-nav {
   display: flex;
 }
+
 .nav-logo {
   width: 45px;
   height: 45px;
@@ -295,8 +292,20 @@ Navbar
   font-size: 1rem;
 }
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
 /* These styles will not be applied if min-width is reached */
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 768px) {
   /* .nav-center {
     position: relative;
   } */
@@ -319,8 +328,9 @@ Navbar
 
   .nav-links {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     list-style: none;
+    
   }
 
   .toggle-container {
@@ -366,7 +376,7 @@ Navbar
   }
   .nav-link {
     color: black;
-    margin-right: 3rem;
+    margin-right: 2rem;
     transition: var(--transition);
     color: var(--clr-white);
     font-size: 1.3rem;
@@ -448,14 +458,14 @@ Hero
   color: var(--clr-primary-5);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1035px) {
   .hero h3 {
     font-size: 1.5rem;
     margin: 1rem 0;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1035pxpx) {
 
   .hero {
   display: flex;
@@ -756,13 +766,13 @@ Product
   margin: 0 auto;
   text-align: center;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1035pxpx) {
   .featured-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1035px) {
   .featured-center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -912,16 +922,6 @@ Locations Page
 Shop Page
 ===============
 */
-.shop-now{
-   background: var(--clr-primary-5);
-  padding: 2px;
-  border-radius: 999px;
-
-  color: white;
-  text-decoration: none;
- transition: var(--transition);
-  transition: 0.3s ease;
-}
 
    
 
