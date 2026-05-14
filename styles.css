@@ -874,8 +874,6 @@ Shop Page
 ===============
 */
 
-   
-
 .products {
   width: 90vw;
   display: grid;
@@ -1022,12 +1020,18 @@ Single Product Page
 
 /*
 =============== 
-Home Page
+Footer
 ===============
 */
 
-.featured-center {
-  display: none;
+.footer_copyright{
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 20px;
 }
 
 /*
