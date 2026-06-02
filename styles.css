@@ -845,6 +845,10 @@ Locations Page
 ===============
 */
 
+.locations-page{
+  background: #f7f3ee;
+}
+
 .locations-text {
   max-width: 45em;
   margin: 0 auto;
@@ -855,17 +859,29 @@ Locations Page
   font-weight: 400;
   line-height: normal;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: heroMoveUp 1s ease forwards;
+  animation-delay: 1.6s;
 }
 
 .locations-title {
   padding: 35px 0px 0px 0px;
-  font-size: 100px;
+  font-size: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: heroMoveUp 1s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .map {
   width: 1218px;
   height: 654px;
   margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: heroMoveUp 1s ease forwards;
+  animation-delay: 3.2s;
 }
 
 @media screen and (max-width: 1250px) {

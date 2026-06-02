@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,9 +6,9 @@
     <title>(Locations) Tealaxation</title>
     <link rel="shortcut icon" href="./images/TealaxationLogo.png" />
     <link
-  href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap"
-  rel="stylesheet"
-/>
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- font-awesome -->
     <link
@@ -21,8 +21,8 @@
   </head>
 
   <body>
-<!--  navbar -->
-     <nav class="navbar">
+    <!--  navbar -->
+    <nav class="navbar">
       <div class="nav-left">
         <!-- sidebar + logo -->
         <button class="toggle-nav">
@@ -79,30 +79,36 @@
         <button class="sidebar-close">
           <i class="fas fa-times"></i>
         </button>
-        <!-- links -->
+    <!--sidebar links -->
         <ul class="sidebar-links">
           <li>
             <a href="index.html" class="sidebar-link">
               <i class="fas fa-home fa-fw"></i>
-              home
+              Home
             </a>
           </li>
           <li>
             <a href="aboutus.html" class="sidebar-link">
               <i class="fas fa-book fa-fw"></i>
-              about
+              About
             </a>
           </li>
           <li>
             <a href="locations.html" class="sidebar-link">
               <i class="fas fa-map fa-fw"></i>
-              locations
+              Locations
+            </a>
+          </li>
+              <li>
+            <a href="contacts.html" class="sidebar-link">
+              <i class="fas fa-phone fa-fw"></i>
+              Contacts
             </a>
           </li>
           <li>
-            <a href="shop.html" class="sidebar-link">
+            <a href="products.html" class="sidebar-link">
               <i class="fas fa-shopping-cart fa-fw"></i>
-              shop
+              Shop Now
             </a>
           </li>
         </ul>
@@ -127,20 +133,21 @@
       </aside>
     </div>
     <!-- locations -->
-    <div class="main-locations"> 
-       <div class="title">
-        <h2 class="locations-title">Tea Time Anywhere</h2>
+    <section class="locations-page">
+      <div class="main-locations">
+        <div class="title">
+          <h2 class="locations-title">Tea Time Anywhere You Are</h2>
+        </div>
+        <p class="locations-text">
+          We have many tea shops all across the world. Come check us out!
+        </p>
+        <img src="./images/Map.png" class="map" alt="logo" />
       </div>
-      <p class="locations-text">
-        We have many tea shops all across the world. Come check us out!
-      </p>
-      <img
-      src="./images/Map.png"
-      class="map"
-      alt="logo"
-    /></div>
-    
     </section>
+    <!-- footer -->
+    <footer class="footer_copyright">
+      &copy; Tea Fancy, Inc. All rights reserved 20XX.
+    </footer>
     <script type="module" src="./src/pages/locations.js"></script>
   </body>
 </html>
