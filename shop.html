@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(Shop) Tealaxation</title>
-    <link rel="shortcut icon" href="./images/TealaxationLogo.png" />
+    <title>(Shop) Tea Fancy</title>
+      <link rel="shortcut icon" href="./images/TFLogo2.png" />
     <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap"
+      rel="stylesheet"
     />
 
     <!-- styles css -->
@@ -16,80 +22,91 @@
   </head>
 
   <body>
-    <!-- navbar -->
     <nav class="navbar">
-      <div class="nav-center">
-        <div class="logo-with-nav">
-          <button class="toggle-nav">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="logo">
-            <ul>
-              <li>
-                <a href="index.html" class="nav-link-logo"> Tealaxation </a>
-                <img
-                  src="./images/TealaxationLogo.png"
-                  class="nav-logo"
-                  alt="logo"
-                />
-              </li>
-            </ul>
-          </div>
+      <div class="nav-left">
+        <!-- sidebar + logo -->
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
 
-          <ul class="nav-links">
+        <div class="logo">
+          <ul>
             <li>
-              <a href="about.html" class="nav-link"> About </a>
-            </li>
-            <li>
-              <a href="shop.html" class="nav-link"> Shop </a>
-            </li>
-            <li>
-              <a href="locations.html" class="nav-link"> Locations </a>
+              <a href="index.html" class="company-name">Tea Fancy</a>
+
+              <img src="./images/TFLogo2.png" class="tea-pic" alt="logo" />
             </li>
           </ul>
         </div>
+      </div>
 
-        <!-- cart icon -->
+      <div class="nav-right">
+        <!-- links + cart icon -->
+        <ul class="nav-links">
+          <li>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="locations.html" class="nav-link">Locations</a>
+          </li>
+
+          <li>
+            <a href="contacts.html" class="nav-link">Contacts</a>
+          </li>
+
+          <li class="shop-now">
+            <a href="shop.html" class="nav-link">Shop Now</a>
+          </li>
+        </ul>
+
         <div class="toggle-container">
           <button class="toggle-cart">
             <i class="fas fa-shopping-cart"></i>
           </button>
+
           <span class="cart-item-count">1</span>
         </div>
       </div>
     </nav>
 
-    <!-- sidebar -->
+  <!-- sidebar -->
     <div class="sidebar-overlay">
       <aside class="sidebar">
         <!-- close -->
         <button class="sidebar-close">
           <i class="fas fa-times"></i>
         </button>
-        <!-- links -->
+        <!--sidebar links -->
         <ul class="sidebar-links">
           <li>
             <a href="index.html" class="sidebar-link">
               <i class="fas fa-home fa-fw"></i>
-              home
+              Home
             </a>
           </li>
           <li>
-            <a href="shop.html" class="sidebar-link">
-              <i class="fas fa-couch fa-fw"></i>
-              shop
-            </a>
-          </li>
-          <li>
-            <a href="about.html" class="sidebar-link">
+            <a href="aboutus.html" class="sidebar-link">
               <i class="fas fa-book fa-fw"></i>
-              about
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="locations.html" class="sidebar-link">
+              <i class="fas fa-map fa-fw"></i>
+              Locations
+            </a>
+          </li>
+              <li>
+            <a href="contacts.html" class="sidebar-link">
+              <i class="fas fa-phone fa-fw"></i>
+              Contacts
             </a>
           </li>
           <li>
             <a href="shop.html" class="sidebar-link">
               <i class="fas fa-shopping-cart fa-fw"></i>
-              shop
+              Shop Now
             </a>
           </li>
         </ul>
@@ -113,11 +130,12 @@
         </footer>
       </aside>
     </div>
-    <div class="title">
-      <h2>Order When You Have Time</h2>
+    <div class="shop-page">
+    <div class="shop-title">
+      Order Here!
     </div>
     <!-- products -->
-    <section class="products">
+    <section class="shop">
       <!-- filters -->
       <div class="filters">
         <div class="filters-container">
@@ -148,6 +166,7 @@
       <!-- products -->
       <div class="products-container"></div>
     </section>
+    </div>
     <!-- page loading -->
     <div class="page-loading">
       <h2>Loading...</h2>

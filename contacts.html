@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(Contacts) Tea Fancy</title>
+    <link rel="shortcut icon" href="./images/TFLogo2.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+
+    <!-- styles css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!--  navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <!-- sidebar + logo -->
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="logo">
+          <ul>
+            <li>
+              <a href="index.html" class="company-name">Tea Fancy</a>
+              <img src="./images/TFLogo2.png" class="tea-pic" alt="logo" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <!-- links + cart icon -->
+        <ul class="nav-links">
+          <li>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="locations.html" class="nav-link">Locations</a>
+          </li>
+
+          <li>
+            <a href="contacts.html" class="nav-link">Contacts</a>
+          </li>
+
+          <li class="shop-now">
+            <a href="shop.html" class="nav-link">Shop Now</a>
+          </li>
+        </ul>
+
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <!-- close -->
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <!--sidebar links -->
+        <ul class="sidebar-links">
+          <li>
+            <a href="index.html" class="sidebar-link">
+              <i class="fas fa-home fa-fw"></i>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="aboutus.html" class="sidebar-link">
+              <i class="fas fa-book fa-fw"></i>
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="locations.html" class="sidebar-link">
+              <i class="fas fa-map fa-fw"></i>
+              Locations
+            </a>
+          </li>
+          <li>
+            <a href="contacts.html" class="sidebar-link">
+              <i class="fas fa-phone fa-fw"></i>
+              Contacts
+            </a>
+          </li>
+          <li>
+            <a href="shop.html" class="sidebar-link">
+              <i class="fas fa-shopping-cart fa-fw"></i>
+              Shop Now
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items"></div>
+        <!-- cart footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">total : $12.99</h3>
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
+    <!-- contacts -->
+    <section class="contacts-page">
+      <div class="contacts-content">
+        <div class="contacts-image-wrap">
+          <img
+            src="./images/TeaFancy(Conversation).png"
+            class="contacts-image"
+            alt="Tea Fancy conversation"
+          />
+        </div>
+
+        <div class="contacts-panel">
+          <h1 class="contacts-title">Contact Us</h1>
+          <form class="contact-form">
+            <div class="contact-name-row">
+              <input
+                type="text"
+                name="firstName"
+                class="contact-input"
+                placeholder="First Name"
+                aria-label="First Name"
+              />
+              <input
+                type="text"
+                name="lastName"
+                class="contact-input"
+                placeholder="Last Name"
+                aria-label="Last Name"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              class="contact-input"
+              placeholder="Email"
+              aria-label="Email"
+            />
+            <textarea
+              name="message"
+              class="contact-input contact-message"
+              placeholder="Type your message here"
+              aria-label="Message"
+            ></textarea>
+            <button type="submit" class="contact-submit">Submit</button>
+            <p class="contact-response"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="footer_copyright">
+      &copy; Tea Fancy, Inc. All rights reserved 20XX.
+    </footer>
+    <script type="module" src="./src/pages/contacts.js"></script>
+  </body>
+</html>
