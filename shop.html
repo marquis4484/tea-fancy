@@ -140,27 +140,38 @@
       <div class="filters">
         <div class="filters-container">
           <!-- search -->
-          <form class="input-form">
-            <input type="text" class="search-input" placeholder="search..." />
-          </form>
+          <div class="filter-group">
+            <form class="input-form">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="search..."
+              />
+            </form>
+          </div>
           <!-- categories -->
-          <h4>Tea Types</h4>
-          <article class="companies">
-            <button class="company-btn">all</button>
-            <button class="company-btn">any</button>
-          </article>
+          <div class="filter-group">
+            <h4>Tea Types</h4>
+            <article class="companies">
+              <button class="company-btn">all</button>
+              <button class="company-btn">any</button>
+            </article>
+          </div>
           <!-- price -->
-          <h4>Price</h4>
-          <form class="price-form">
-            <input
-              type="range"
-              class="price-filter"
-              min="0"
-              value="50"
-              max="100"
-            />
-          </form>
-          <p class="price-value"></p>
+          <div class="filter-group">
+            <h4>Price</h4>
+            <form class="price-form">
+              <input
+                type="range"
+                class="price-filter"
+                min="0"
+                value="50"
+                max="100"
+              />
+            </form>
+            <p class="price-value"></p>
+          </div>
+          <h3 class="filter-error" aria-live="polite"></h3>
         </div>
       </div>
       <!-- products -->

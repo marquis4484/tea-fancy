@@ -10,53 +10,64 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
+        <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Mea+Culpa&family=Monsieur+La+Doulaise&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- styles css -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="product-page">
     <!-- navbar -->
-    <nav class="navbar">
-      <div class="nav-center">
-        <div class="logo-with-nav">
-          <button class="toggle-nav">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="logo">
-            <ul>
-              <li>
-                <a href="index.html" class="nav-link-logo"> Tea Fancy </a>
-                <img
-                  src="./images/TFLogo2.png"
-                  class="nav-logo"
-                  alt="logo"
-                />
-              </li>
-            </ul>
-          </div>
+   <nav class="navbar">
+      <div class="nav-left">
+        <!-- sidebar + logo -->
+        <button class="toggle-nav">
+          <i class="fas fa-bars"></i>
+        </button>
 
-          <ul class="nav-links">
+        <div class="logo">
+          <ul>
             <li>
-              <a href="about.html" class="nav-link"> About </a>
-            </li>
-            <li>
-              <a href="shop.html" class="nav-link"> Shop </a>
-            </li>
-            <li>
-              <a href="locations.html" class="nav-link"> Locations </a>
+              <a href="index.html" class="company-name">Tea Fancy</a>
+
+              <img src="./images/TFLogo2.png" class="tea-pic" alt="logo" />
             </li>
           </ul>
         </div>
+      </div>
 
-        <!-- cart icon -->
+      <div class="nav-right">
+        <!-- links + cart icon -->
+        <ul class="nav-links">
+          <li>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="locations.html" class="nav-link">Locations</a>
+          </li>
+
+          <li>
+            <a href="contacts.html" class="nav-link">Contacts</a>
+          </li>
+
+          <li class="shop-now">
+            <a href="shop.html" class="nav-link">Shop Now</a>
+          </li>
+        </ul>
+
         <div class="toggle-container">
           <button class="toggle-cart">
             <i class="fas fa-shopping-cart"></i>
           </button>
+
           <span class="cart-item-count">1</span>
         </div>
       </div>
     </nav>
+
     <!-- hero -->
     <section class="page-hero">
       <div class="section-center">
@@ -136,12 +147,12 @@
             <h2 class="single-product-title">Tea</h2>
             <p class="single-product-company text-slanted">----</p>
             <p class="single-product-price">$0.00</p>
-            <div class="single-product-colors"></div>
             <p class="single-product-desc">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
               modi? Minima libero doloremque necessitatibus! Praesentium
               recusandae quod nesciunt animi voluptatem!
             </p>
+            <div class="single-product-sources"></div>
             <button class="addToCartBtn btn" data-id="id">add to cart</button>
           </div>
         </article>

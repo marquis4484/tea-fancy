@@ -14,12 +14,74 @@ const imgDOM = getElement(".single-product-img");
 const titleDOM = getElement(".single-product-title");
 const companyDOM = getElement(".single-product-company");
 const priceDOM = getElement(".single-product-price");
-const colorsDOM = getElement(".single-product-colors");
 const descDOM = getElement(".single-product-desc");
+const sourcesDOM = getElement(".single-product-sources");
 const cartBtn = getElement(".addToCartBtn");
 
 // cart product
 let productID;
+
+const isUrl = (value) => {
+  try {
+    return Boolean(new URL(value));
+  } catch (error) {
+    return false;
+  }
+};
+
+const escapeHTML = (value) => {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+};
+
+const getSourceMarkup = (source) => {
+  if (typeof source === "string") {
+    const text = source.trim();
+    if (!text) return "";
+    if (isUrl(text)) {
+      const escapedUrl = escapeHTML(text);
+      return `<li><a href="${escapedUrl}" target="_blank" rel="noopener noreferrer">${escapedUrl}</a></li>`;
+    }
+    return `<li>${escapeHTML(text)}</li>`;
+  }
+
+  if (source && typeof source === "object") {
+    const label = source.label || source.name || source.title || source.url;
+    const url = source.url || source.href || source.link;
+    if (url && isUrl(url)) {
+      const escapedUrl = escapeHTML(url);
+      return `<li><a href="${escapedUrl}" target="_blank" rel="noopener noreferrer">${escapeHTML(label || url)}</a></li>`;
+    }
+    if (label) return `<li>${escapeHTML(label)}</li>`;
+  }
+
+  return "";
+};
+
+const displaySources = (sources) => {
+  const productSources = Array.isArray(sources)
+    ? sources
+    : sources
+      ? [sources]
+      : [];
+  const sourcesMarkup = productSources.map(getSourceMarkup).join("");
+
+  if (!sourcesMarkup) {
+    sourcesDOM.innerHTML = "";
+    return;
+  }
+
+  sourcesDOM.innerHTML = `
+    <h3 class="single-product-sources-title">Sources</h3>
+    <ul class="single-product-sources-list">
+      ${sourcesMarkup}
+    </ul>
+  `;
+};
 
 // shows product when page loads
 window.addEventListener("DOMContentLoaded", async function () {
@@ -42,7 +104,9 @@ window.addEventListener("DOMContentLoaded", async function () {
       const { id, fields } = product;
       productID = id;
 
-      const { name, company, price, colors, description } = fields;
+      const { name, company, price, description } = fields;
+      const productSources =
+        fields.sources || fields.source || fields.Sources || fields.Source;
       const image = fields.image[0].thumbnails.large.url;
       // set values
 
@@ -53,12 +117,8 @@ window.addEventListener("DOMContentLoaded", async function () {
       companyDOM.textContent = `by ${company}`;
       priceDOM.textContent = formatPrice(price);
       descDOM.textContent = description;
-      colors.forEach((color) => {
-        const span = document.createElement("span");
-        span.classList.add("product-color");
-        span.style.backgroundColor = `${color}`;
-        colorsDOM.appendChild(span);
-      });
+      displaySources(productSources);
+  
     } else {
       console.log(response.status, response.statusText);
       centerDOM.innerHTML = `
