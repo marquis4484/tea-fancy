@@ -1207,13 +1207,14 @@ Shop Page
 
 .shop-page{
   background: #f7f3ee;
+  overflow: hidden;
 }
 
 .shop {
   width: 90vw;
   display: grid;
   grid-gap: 1rem;
-  margin: 1rem auto;
+  margin: 1rem auto 0;
   max-width: var(--max-width);
   position: relative;
 }

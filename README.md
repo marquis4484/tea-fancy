@@ -2,41 +2,35 @@
 
 ![Tea Fancy](images/TeaFancyMainPage.png)
 
-**Tea Fancy** is an e-commerce tea website built with HTML, CSS, and vanilla JavaScript. The project includes a homepage, an aboutus page, a locations page, a contact page,a shopping page, and a page for each single product to creat a persistent shopping cart experience.
+**Tea Fancy** is an e-commerce tea website built with HTML, CSS, and vanilla JavaScript. The project includes a homepage, an aboutus page, a locations page, a contact page, a shopping page, and a page for each single product to create a persistent e-commerce experience.
 
 ## Project Overview
 
-Tea Fancy is an ecommerce-style frontend project designed around a premium tea brand. The application lets users browse teas, filter products by search, tea type, and price! The user can open individual product detail pages with product descriptions about various tea brands so they can decide what to add to their shopping carts. Cart information is stored in `localStorage`, which allows product selections and totals to persist across page refreshes. 
+Tea Fancy is an ecommerce frontend project designed to promote a fictional premium tea distribution company. The application lets users browse teas and filters those tea products by search, tea type, and price! The user can open individual product detail pages with product descriptions about various tea brands so they can decide what to add to their shopping carts. Cart information is stored in localStorage, which allows product selections and totals to persist across page refreshes. 
 
-The project uses static HTML pages for routing, shared CSS for visual design and responsiveness, and JavaScript modules for reusable behavior. Product data is fetched from an external JSON endpoint, normalized into a local store, displayed dynamically in the shop, and reused across the cart and product detail pages. The result is a website that creates a shopping experience without a frontend framework.
+The project uses static HTML pages for routing, shared CSS for visual design and responsiveness, and JavaScript modules for reusable behavior. Product data is fetched from an external JSON endpoint, processed into a localstorage and displayed dynamically in the shop to be reused across the cart and product detail pages. The result is a website that creates a shopping experience with just vanilla JavaScript.
 
 ## Features
 
-- **Responsive page layouts:** The homepage, about page, locations page, contact page, shop page, and product page are styled for desktop, tablet, and mobile screen sizes.
+- **Responsive page layouts:** The homepage, about page, locations page, contact page, shop page, and product pages are styled for desktop, tablet, and mobile screen sizes.
 - **Dynamic product catalog:** Product cards are rendered from fetched JSON data rather than hardcoded directly into the shop page.
-- **Horizontal filter controls:** The shop filters are grouped into a responsive flex layout so search, tea type, and price controls can sit across the page on wider screens.
-- **Search filtering:** Users can search tea products by name from the shop page with case-insensitive matching.
-- **Tea type filtering:** The shop dynamically generates category buttons from product company/type data.
-- **Price filtering:** A range input filters visible products by maximum price.
-- **No-results messaging:** Search and price filters display a styled no-results message underneath the filter controls when no products match.
+- **Filter controls:** The shop filters are grouped into a responsive flex layout with search, tea type, and price controls.
 - **Single product pages:** Product detail pages load the selected tea by URL query parameter and display its image, name, company, price, description, and source references.
 - **Product sources:** Product pages support source data from the API as text, URLs, arrays, or source objects and render URL sources as external links.
 - **Shopping cart drawer:** Users can open and close the cart overlay from the navigation.
-- **Cart persistence:** Cart contents, item counts, and totals are saved with `localStorage`.
+- **Cart persistence:** Cart contents, item counts, and totals are saved with localStorage.
 - **Cart controls:** Users can add products, remove items, and increase or decrease quantities directly in the cart.
-- **Contact form behavior:** The contact page displays a thank-you message after submission and clears the form fields.
-- **Reusable utilities:** Shared helpers handle DOM selection, price formatting, product fetching, and local storage access.
-- **Animations and visual polish:** Several pages use fade and move-up animations to make the interface feel more refined.
+- **Animations and visual polish:** Several pages use fade and move up animations to make the interface feel more refined.
 
 ## Overall Application Structure
 
-The application follows a static multi-page structure supported by reusable JavaScript modules. Each HTML page contains its own page shell, navigation, cart overlay, and content section. Page-specific scripts live in `src/pages/` and import shared modules for sidebar behavior, cart behavior, product rendering, filtering, and data access.
+The application follows a static multi-page structure supported by reusable JavaScript modules. Each HTML page contains its own page shell, navigation, cart overlay, and content section. Page specific scripts live in `src/pages/` and import shared modules for sidebar behavior, cart behavior, product rendering, filtering, and data access.
 
 Product data flows from the external JSON endpoint defined in `src/utils.js` into `fetchProducts`, then into `setupStore`, where each product is normalized into a simpler object containing the `id`, `name`, `price`, `company`, and image URL. The shop page renders that store through `displayProducts`, while filters reuse the same store to render narrowed product lists. The product detail page reads richer API fields directly, including descriptions and source references. The cart reads products from the store, tracks selected items in memory, and writes cart state back to `localStorage`.
 
 ### `index.html` and `index.js`
 
-`index.html` is the homepage for Tea Fancy. It introduces the brand with a full-page video background, navigation, cart access, and a primary call to action that sends users into the shopping flow. `index.js` imports global sidebar and cart modules so the shared navigation behavior works on the homepage.
+`index.html` is the homepage for Tea Fancy. It introduces the brand with a full page video background, navigation, cart access, and a primary call to action that sends users into the shopping flow. `index.js` imports global sidebar and cart modules so the shared navigation behavior works on the homepage.
 
 ### `aboutus.html` and `src/pages/about.js`
 
@@ -44,15 +38,15 @@ The about page presents Tea Fancy's brand story and mission. Its layout pairs wr
 
 ### `locations.html` and `src/pages/locations.js`
 
-The locations page displays a store-location message and map image in a centered responsive layout. The page keeps the same navbar, sidebar, and cart overlay structure as the rest of the site, while its visual content focuses on the map and global availability messaging.
+The locations page displays a store location message and map image in a centered responsive layout. The page keeps the same navbar, sidebar, and cart overlay structure as the rest of the site, while its visual content focuses on the map.
 
 ### `contacts.html` and `src/pages/contacts.js`
 
-The contact page combines a brand image with a contact form. The script listens for form submission, prevents the default page refresh, displays a thank-you response, and resets all form fields. This keeps the interaction lightweight while still giving users immediate feedback.
+The contact page combines a brand image with a contact form. The script listens for form submission, prevents the default page refresh, displays a thank you response, and resets all form fields.
 
 ### `shop.html` and `src/pages/shop.js`
 
-The shop page is the main product catalog experience. `shop.js` fetches product data when needed, stores normalized products with `setupStore`, renders the product grid through `displayProducts`, and initializes search, tea type, and price filters. Its filter controls are arranged in responsive groups across the top of the shop area, and the no-results message appears with the filter controls when search or price filtering returns no products. It also hides the loading screen after the page has finished preparing the catalog.
+The shop page is the main product catalog experience. `shop.js` fetches product data when needed, stores normalized products with `setupStore`, renders the product grid through `displayProducts`, and initializes search, tea type, and price filters. Its filter controls are arranged in responsive groups across the top of the shop area, and the no results message appears with the filter controls when search or price filtering returns no products. It also hides the loading screen after the page has finished preparing the catalog.
 
 ### `product.html` and `src/pages/product.js`
 
@@ -84,7 +78,7 @@ The search filter listens for user input in the shop search bar. It normalizes t
 
 ### `src/filters/companies.js`
 
-The tea type filter builds its button list dynamically from available product company/type values. Selecting a button re-renders the shop grid with either all products or only products that match the selected type.
+The tea type filter builds its button list dynamically from available product company type values. Selecting a button re-renders the shop grid with either all products or only products that match the selected type.
 
 ### `src/filters/price.js`
 
@@ -104,4 +98,4 @@ This project also helped reinforce how modular JavaScript can organize behavior 
 
 ## Deployment
 
-
+You can find this project deployed here: https://teafancy.netlify.app/
