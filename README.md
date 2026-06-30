@@ -90,11 +90,8 @@ The price filter calculates the highest product price, configures the range inpu
 
 ## Challenges Faced / What I Learned
 
-One major challenge in this project was coordinating product data across several independent pages without a framework router or centralized application state library. The shop page, product page, and cart all need access to the same product data, so the project uses a normalized store and `localStorage` to make product and cart information reusable across page loads.
-
-Another important challenge was keeping the interface responsive across several different page types. The about, contact, locations, shop, and product pages each have different layout needs, but they still need to feel like one cohesive brand. This project strengthened my understanding of CSS layout techniques, including grid, flexbox, responsive media queries, image scaling, overlays, and page specific styling. The shop filters and product detail page were especially useful for practicing how to use leftover space without making the layout feel crowded.
-
-This project also helped reinforce how modular JavaScript can organize behavior in a static website. Instead of keeping all scripts in one file, responsibilities are split into smaller modules for cart behavior, sidebar behavior, product rendering, filtering, data fetching, and utilities.
+One challenge that I had when building this application was searching for a product API store to distributes the tea brands that I wanted to showcase. I couldn't find a tea shop API that fit my descriptions so I created on myself and hosted that data onto GitHub pages. 
+Another important challenge was keeping the interface responsive across several different page types. The about, contact, locations, shop, and product pages each have different layouts, but they still needed to feel like one cohesive brand. This project strengthened my understanding of CSS layout techniques, including grid, flexbox, responsive media queries, image scaling, overlays, and page specific styling. The shop filters and product detail page were especially useful for practicing how to use leftover space without making the layout feel crowded.
 
 ## Deployment
 
